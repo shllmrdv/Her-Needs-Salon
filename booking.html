@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking - Her-Needs Salon</title>
+  <link rel="Shortcut Icon" href="assets/img/herneedslogo.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container-width">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/herneedslogo.png" alt="Her-Needs logo" />
+        <span class="brand-name">Her-Needs Salon</span>
+      </a>
+
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="pricelist.html">Price List & Catalog</a>
+        <a class="nav-link active" href="booking.html">Booking</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container-width">
+        <h1 class="page-title fade-in">Booking Appointment</h1>
+        <p class="page-subtitle fade-in" style="--d: 120ms">
+          Isi data berikut. Kami akan menampilkan ringkasan booking setelah submit.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-width">
+        <div class="grid-form">
+          <form id="bookingForm" class="form-card" novalidate>
+            <h2 class="form-title">Form Booking</h2>
+
+            <div class="field">
+              <label for="nama">Nama</label>
+              <input id="nama" name="nama" type="text" placeholder="Contoh: Ayu" required />
+              <small class="hint" id="namaHint"></small>
+            </div>
+
+            <div class="field">
+              <label for="tanggal">Tanggal</label>
+              <input id="tanggal" name="tanggal" type="date" required />
+              <small class="hint" id="tanggalHint"></small>
+            </div>
+
+            <div class="field">
+              <label for="layanan">Layanan</label>
+              <select id="layanan" name="layanan" required>
+                <option value="" selected disabled>Pilih layanan</option>
+                <option value="Haircut">Haircut</option>
+                <option value="Hair Spa">Hair Spa</option>
+                <option value="Facial">Facial</option>
+                <option value="Manicure">Manicure</option>
+                <option value="Pedicure">Pedicure</option>
+              </select>
+              <small class="hint" id="layananHint"></small>
+            </div>
+
+            <div class="field">
+              <button class="btn btn-primary" type="submit">Submit Booking</button>
+              <button class="btn btn-ghost" type="reset">Reset</button>
+            </div>
+          </form>
+
+          <aside class="summary-card fade-in" style="--d: 150ms">
+            <h2 class="form-title">Ringkasan</h2>
+            <div class="summary-line"><strong>Nama:</strong> <span id="sumNama">-</span></div>
+            <div class="summary-line"><strong>Tanggal:</strong> <span id="sumTanggal">-</span></div>
+            <div class="summary-line"><strong>Layanan:</strong> <span id="sumLayanan">-</span></div>
+            <div class="summary-note">
+              <p>
+                Setelah submit, ringkasan akan muncul di sini.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-width footer-grid">
+      <p class="muted">© <span id="year"></span> Her-Needs Salon - By Shallom </p>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <span class="sep">•</span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
