@@ -399,6 +399,7 @@ a {
   line-height: 1.6;
 }
 
+
 /* Price list image + price sizing (desktop-friendly) */
 .img-box {
   margin-top: 14px;
@@ -661,3 +662,84 @@ input:focus, select:focus {
   .cards-grid { grid-template-columns: 1fr; }
 }
 
+/* ========================= */
+/* RESPONSIVE FIX (MOBILE) */
+/* ========================= */
+
+/* Grid cards auto responsive */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* Gambar biar tidak keluar */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========================= */
+/* MOBILE VIEW */
+/* ========================= */
+@media (max-width: 768px) {
+
+  /* Semua layout jadi 1 kolom */
+  .hero-grid,
+  .grid-form,
+  .contact-grid,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  /* Cards full ke bawah */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Header */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Navbar tetap tampil */
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Hero text */
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  /* Card */
+  .card {
+    padding: 14px;
+  }
+
+  /* Box gambar */
+  .img-box {
+    height: 120px;
+  }
+
+  /* Button full */
+  .btn,
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+
+}
