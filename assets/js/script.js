@@ -97,3 +97,19 @@
   });
 })();
 
+const images = document.querySelectorAll(".img-box img");
+const popup = document.getElementById("popup-img");
+const popupImg = document.getElementById("popup-content");
+const closeBtn = document.getElementById("close-btn");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    popup.style.display = "block";
+    popupImg.src = img.src;
+  });
+});
+
+closeBtn.onclick = () => {
+  popup.style.display = "none";
+};
+
